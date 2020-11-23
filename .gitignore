@@ -8,3 +8,8 @@ public/
 .deploy*/
 src/_drafts
 package-lock.json
+
+#IDE
+.vscode
+.idea
+.Idea
