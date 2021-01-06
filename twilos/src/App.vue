@@ -1,56 +1,58 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+    <!-- Barre de navigation du haut -->
+    <v-app-bar color="#2599A8" app>
+    <v-btn icon>
+      <v-icon style="font-size:3rem">mdi-account-plus</v-icon>
+    </v-btn>
+    <div class="flex justify-center">
+      <v-avatar
+              class="mx-2"
+              color="grey darken-1"
+              max-height="56"
+              max-width="56"
+              contain
+            >
+      </v-avatar>
+    </div>
 
-      <v-spacer></v-spacer>
+     <v-btn icon>
+      <v-icon style="font-size:3rem">mdi-menu</v-icon>
+    </v-btn>
+  </v-app-bar>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
+    <!-- Contenu -->
     <v-main>
-      <HelloWorld/>
+      <timeline/>
     </v-main>
+
+    <!-- Barre de navigation du bas -->
+    <v-bottom-navigation v-model="value" :background-color="'#2599A8'" grow app>
+    <!-- -->
+    <v-btn value="home" >
+        <v-icon style="font-size:3rem">mdi-home</v-icon>
+      </v-btn>
+
+    <v-btn value="tweet">
+        <v-icon style="font-size:3rem">mdi-plus-circle-outline</v-icon>
+      </v-btn>
+
+      <v-btn value="private-message">
+        <v-icon style="font-size:3rem">mdi-email</v-icon>
+      </v-btn>
+  </v-bottom-navigation>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import timeline from './components/timeline';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    timeline,
   },
 
   data: () => ({
@@ -58,3 +60,11 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+
+.flex {
+  display: flex;
+}
+
+</style>
