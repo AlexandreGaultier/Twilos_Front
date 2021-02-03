@@ -14,6 +14,7 @@
               max-width="56"
               contain
             >
+            <img :src="navbar.img"/>
       </v-avatar>
     </div>
 
@@ -24,7 +25,7 @@
 
     <!-- Contenu -->
     <v-main>
-      <timeline/>
+      <tweet/>
     </v-main>
 
     <!-- Barre de navigation du bas -->
@@ -46,17 +47,23 @@
 </template>
 
 <script>
-import timeline from './components/timeline';
+//import timeline from './components/timeline';
+//import profil from './components/profil';
+import tweet from './components/tweet';
 
 export default {
   name: 'App',
 
   components: {
-    timeline,
+    //timeline,
+    //profil,
+    tweet,
   },
 
   data: () => ({
-    //
+    navbar: {
+      img: "https://image.noelshack.com/fichiers/2021/01/3/1609939912-opera-i6vxo8dxag.png",
+    }
   }),
 };
 </script>

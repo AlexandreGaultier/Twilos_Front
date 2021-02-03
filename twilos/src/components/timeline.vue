@@ -9,6 +9,7 @@
       <v-row>
            <v-col v-for="(item, i) in items" :key="i" cols="12">
             <v-card flat :color="item.color" class="mx-auto" max-width="400">
+
                 <v-card-title>
                   <v-avatar color="white" class="mr-4"><img :src="item.avatar"/></v-avatar>
                   <span class="title font-weight-light" v-text="item.pseudo"></span>
@@ -17,6 +18,7 @@
                   <div class="text--primary" v-text="item.post">
                   </div>
                 </v-card-text>
+
                 <v-card-actions>
                     <v-btn icon><v-icon class="mr-1" color="red"> mdi-heart</v-icon></v-btn>
                     <span class="subheading mr-2" v-text="item.like"></span>
@@ -24,7 +26,7 @@
                     <v-btn icon><v-icon class="mr-1" color="#0C7ABF"> mdi-comment-text</v-icon></v-btn>
                     <span class="subheading" v-text="item.commentaires"></span>
                 </v-card-actions>
-               
+                
             </v-card>
         </v-col>
       </v-row>
