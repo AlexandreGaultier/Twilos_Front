@@ -20,7 +20,7 @@
 
      <v-btn icon>
       <v-icon style="font-size:3rem">mdi-menu</v-icon>
-    </v-btn>
+      </v-btn>
   </v-app-bar>
 
     <!-- Contenu -->
