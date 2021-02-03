@@ -1,18 +1,17 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <Timeline/>
+    <login/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Timeline from '@/components/timeline.vue'
+import Login from '@/components/Login.vue'
 
 export default {
   name: 'Home',
   components: {
-    Timeline
+    Login
   }
 }
 </script>

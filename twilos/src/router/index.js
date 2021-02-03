@@ -6,6 +6,11 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/',
+    name: 'Home',
+    component: () => import( '../views/Home.vue')
+  }, 
+  {
     path: '/timeline',
     name: 'Timeline',
     component: () => import( '../components/timeline.vue')
@@ -33,9 +38,14 @@ const routes = [
     // which is lazy-loaded when the route is visited.
   },
   {
-    path: '/connection',
-    name: 'Connection',
-    component: () => import('../views/Connection.vue')
+    path: '/login',
+    name: 'Login',
+    component: () => import('../components/Login.vue')
+  },
+  {
+    path: '/inscription',
+    name: 'Inscription',
+    component: () => import('../components/Inscription.vue')
   }
 ]
 

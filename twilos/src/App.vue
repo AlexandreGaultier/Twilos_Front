@@ -25,7 +25,7 @@
 
     <!-- Contenu -->
     <v-main>
-      <tweet/>
+      <Home/>
     </v-main>
 
     <!-- Barre de navigation du bas -->
@@ -49,15 +49,18 @@
 <script>
 //import timeline from './components/timeline';
 //import profil from './components/profil';
-import tweet from './components/tweet';
+//import tweet from './components/tweet';
+import Home from './components/Home';
+Home
 
 export default {
   name: 'App',
 
   components: {
+    Home,
     //timeline,
     //profil,
-    tweet,
+    //tweet,
   },
 
   data: () => ({
