@@ -51,6 +51,7 @@
 //import profil from './components/profil';
 //import tweet from './components/tweet';
 import Home from './components/Home';
+import * as Keycloak from 'keycloak-js';
 Home
 
 export default {
@@ -68,6 +69,19 @@ export default {
       img: "https://image.noelshack.com/fichiers/2021/01/3/1609939912-opera-i6vxo8dxag.png",
     }
   }),
+
+  methods :{
+  login: function () {
+      if (Keycloak.token !== null) {
+  this.authenticated = true;
+  this.user.username = Keycloak.userName;
+  this.user.role = Keycloak.tokenParsed.realm_access.roles[0];
+  this.user.email = Keycloak.tokenParsed.email;
+} else {
+  console.log('Not logged');
+}
+    }
+  },
 };
 </script>
 

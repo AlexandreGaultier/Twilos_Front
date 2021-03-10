@@ -5,7 +5,7 @@
           cols="12"
           md="4"
         >
-        <h2 align="center">Connexion</h2>
+        <h2 align="center">Connexiiion</h2>
         </v-col>
 
         <!-- Login -->
@@ -40,7 +40,7 @@
           md="4"
         >
           <router-link to="/inscription"><v-btn> S'inscrire </v-btn></router-link>
-          
+          <v-btn @click=login> test </v-btn>
         </v-col>
 
       </v-row>
@@ -49,6 +49,7 @@
 </template>
 
 <script>
+//import * as Keycloak from 'keycloak-js';
   export default {
    data: () => ({
     valid: false,
@@ -69,6 +70,13 @@
         //   v => v.length <= 10 || 'Le nom doit faire plus de 10 charactèresssdzd',
       ]
   }),
+     methods :{
+  login: function () {
+     
+
+
+    }
+  },
   }
 </script>
 
